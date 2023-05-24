@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-
+import AppNavbar from "./Component/AppNavbar";
+import { Router, Routes,Route } from 'react-router-dom'
+import ThreeDimensionView from "./Component/ThreeDimensionView";
+import Landing from "./Component/Landing";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <AppNavbar/>
+    <Routes>
+        <Route exact path='/' Component={Landing}/>
+        <Route exact path='/3dview/:id' Component={ThreeDimensionView}/>
+    </Routes>
+    </>
   );
 }
 
