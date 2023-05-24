@@ -7,7 +7,7 @@ import Spinner from "react-bootstrap/Spinner";
 
 //Model
 function Model(props) {
-  const { scene } = useGLTF("http://localhost:8080/" + props.param);
+  const { scene } = useGLTF("https://threedviewbackend.onrender.com/" + props.param);
   return <primitive object={scene} {...props} />;
 }
 
@@ -18,7 +18,7 @@ function ThreeDimensionView() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/item/modelname?id=${id}`)
+      .get(`https://threedviewbackend.onrender.com/item/modelname?id=${id}`)
       .then((response) => {
         console.log(response.data.filename);
         setfname(response.data.filename);

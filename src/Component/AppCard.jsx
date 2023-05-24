@@ -34,7 +34,7 @@ function AppCard(props) {
     >
       <img
         src={
-          "http://localhost:8080/" + props.img
+          "https://threedviewbackend.onrender.com/" + props.img
         }
         className="card-img-top img-fluid"
         alt="..."

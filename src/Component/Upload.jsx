@@ -29,7 +29,7 @@ function Upload() {
       formData.append("modelname", modelName);
 
       const response = await axios
-        .post("http://localhost:8080/item/senddata", formData, {
+        .post("https://threedviewbackend.onrender.com/item/senddata", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
