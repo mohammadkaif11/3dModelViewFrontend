@@ -9,7 +9,7 @@ function Landing() {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    axios.get("https://threedviewbackend.onrender.com/item/getdata").then((response) => {
+    axios.get("https://backend-cs7woc-microtica.microtica.rocks/item/getdata").then((response) => {
       setArr(response.data);
     });
   }, []);

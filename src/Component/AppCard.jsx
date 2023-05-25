@@ -34,7 +34,7 @@ function AppCard(props) {
     >
       <img
         src={
-          "https://threedviewbackend.onrender.com/" + props.img
+          "https://backend-cs7woc-microtica.microtica.rocks/" + props.img
         }
         className="card-img-top img-fluid"
         alt="..."

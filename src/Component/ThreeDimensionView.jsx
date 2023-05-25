@@ -7,9 +7,10 @@ import Spinner from "react-bootstrap/Spinner";
 
 //Model
 function Model(props) {
-  const { scene } = useGLTF("https://threedviewbackend.onrender.com/" + props.param);
+  const { scene } = useGLTF("https://backend-cs7woc-microtica.microtica.rocks/" + props.param);
   return <primitive object={scene} {...props} />;
 }
+
 
 //Three Dimensions View
 function ThreeDimensionView() {
@@ -18,7 +19,7 @@ function ThreeDimensionView() {
 
   useEffect(() => {
     axios
-      .get(`https://threedviewbackend.onrender.com/item/modelname?id=${id}`)
+      .get(`https://backend-cs7woc-microtica.microtica.rocks/item/modelname?id=${id}`)
       .then((response) => {
         console.log(response.data.filename);
         setfname(response.data.filename);

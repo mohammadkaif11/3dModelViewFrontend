@@ -29,7 +29,7 @@ function Upload() {
       formData.append("modelname", modelName);
 
       const response = await axios
-        .post("https://threedviewbackend.onrender.com/item/senddata", formData, {
+        .post("https://backend-cs7woc-microtica.microtica.rocks/item/senddata", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
