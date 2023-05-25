@@ -7,10 +7,9 @@ import Spinner from "react-bootstrap/Spinner";
 
 //Model
 function Model(props) {
-  const { scene } = useGLTF("https://backend-cs7woc-microtica.microtica.rocks/" + props.param);
+  const { scene } = useGLTF("https://backend-cs7woc-microtica.microtica.rocks/item/file/" + props.param);
   return <primitive object={scene} {...props} />;
 }
-
 
 //Three Dimensions View
 function ThreeDimensionView() {
